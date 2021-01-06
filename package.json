@@ -1,0 +1,48 @@
+{
+  "author": {
+    "name": "Kıraç Armağan Önal"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "cli-color": "^2.0.0",
+    "json-parse-helpfulerror": "^1.0.3",
+    "json-stringify-safe": "^5.0.1",
+    "lodash": "^4.17.15"
+  },
+  "deprecated": false,
+  "description": "Easy to use and fast JSON file based database.",
+  "keywords": [
+    "json",
+    "db",
+    "database",
+    "fast",
+    "fresh",
+    "quick",
+    "fresh.db",
+    "quick.db",
+    "new-json-db",
+    "@armagan_/fast.db",
+    "fast.db",
+    "new",
+    "helpfull",
+    "quick",
+    "json.db",
+    "json-data-base",
+    "data-base",
+    "easy",
+    "fs",
+    "module",
+    "fs-module",
+    "helpful-errors",
+    "🌿",
+    "async",
+    "sync"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "fresh.db",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "version": "1.0.6"
+}
