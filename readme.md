@@ -49,11 +49,20 @@ $ npm install fresh.db
   getAll(); // {"my":{"data":12}}
   ```
 - `getAll()`: (Object)
-- `s.push()`: (Array)
+- `s.push()`: (Any)
+  - **arg-1:** (String)
+  - **arg-2:** (Any)
+- `s.unshift()`: (Any)
   - **arg-1:** (String)
   - **arg-2:** (Any)
 - `s.shift()`: (Any)
   - **arg-1:** (String)
+- `s.pop()`: (Any)
+  - **arg-1:** (String)
+- `s.splice()`: (Any)
+  - **arg-1:** (String)
+  - **arg-2:** (Number)
+  - **arg-3:** (Number)
 - `s.add()`: (Number)
   - **arg-1:** (String)
   - **arg-2:** (Number)
@@ -107,6 +116,8 @@ db.set("player.inventory[1]", "Diamond Sword");
 ```
 
 ## 🔙 Updates
+
+###### Update (1.0.7): new 3 shorthands.
 
 ###### Update (1.0.41): Fixed `setDefaultOptions`.
 

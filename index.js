@@ -192,28 +192,65 @@ const FreshDB = function (options = {}) {
      * db.update shorthands.
      */
     this.s = {
-        push: function (dataPath, ...value) {
+        push: function(dataPath, ...value) {
+            let r;
             self.update(dataPath, (d) => {
                 if (!Array.isArray(d)) {
                     if (!!d) throw new Error(`${options.name}, ${dataPath} is not an a array.`);
                     d = [];
                 }
-                d.push(...value);
+                r = d.push(...value);
                 return d;
             });
-            return value;
+            return r;
+        },
+        unshift: function(dataPath, ...value) {
+            let r;
+            self.update(dataPath, (d) => {
+                if (!Array.isArray(d)) {
+                    if (!!d) throw new Error(`${options.name}, ${dataPath} is not an a array.`);
+                    d = [];
+                }
+                r = d.unshift(...value);
+                return d;
+            });
+            return r;
         },
         shift: function (dataPath) {
-            let d = self.get(dataPath);
+            let r;
             self.update(dataPath, (d) => {
                 if (!Array.isArray(d)) {
                     if (!!d) throw new Error(`${options.name}, ${dataPath} is not an a array.`);
                     d = [];
                 }
-                d.shift();
+                r = d.shift();
                 return d;
             });
-            return d[0];
+            return r;
+        },
+        pop: function(dataPath) {
+            let r;
+            self.update(dataPath, (d) => {
+                if (!Array.isArray(d)) {
+                    if (!!d) throw new Error(`${options.name}, ${dataPath} is not an a array.`);
+                    d = [];
+                }
+                r = d.pop();
+                return d;
+            });
+            return r;
+        },
+        splice: function(dataPath, index, deleteCount) {
+            let r;
+            self.update(dataPath, (d) => {
+                if (!Array.isArray(d)) {
+                    if (!!d) throw new Error(`${options.name}, ${dataPath} is not an a array.`);
+                    d = [];
+                }
+                r = d.splice(index, deleteCount);
+                return d;
+            });
+            return r;
         },
         add: function (dataPath, value) {
             return self.update(dataPath, (d) => {
